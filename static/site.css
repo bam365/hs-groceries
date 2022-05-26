@@ -1,0 +1,33 @@
+body {
+    background-color: #aaaaaa;
+    font-size: 18px;
+}
+
+.main {
+    max-width: 1024px;
+    margin: 0 auto; 
+    padding: 2em;
+    background-color: white;
+}
+
+.add-grocery-input {
+    margin: 0 1em;
+}
+
+button {
+    padding: 0.25em 2em;
+}
+
+.clear-gotten {
+    margin-top: 1em;
+}
+
+.grocery-list {
+    margin: 1.5em 0;
+    font-size: 1.5em;
+}
+
+.active-chk {
+    width: 1.5em;
+    height: 1.5em;
+}

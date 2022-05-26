@@ -1,0 +1,79 @@
+cabal-version:      2.4
+name:               hs-groceries
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+-- license:
+author:             Blake Mitchell
+maintainer:         bam365@umsystem.edu
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  GroceriesLib
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    -- Other library packages from which modules are imported.
+    build-depends:
+        base >=4.5 && <5,
+        beam-core >=0.9.2.0 && <1.0,
+        beam-sqlite,
+        sqlite-simple,
+        text,
+        transformers
+    hs-source-dirs:   src
+    default-language: Haskell2010
+    default-extensions:
+        DeriveGeneric 
+        GADTs
+        OverloadedStrings
+        FlexibleContexts
+        FlexibleInstances
+        TypeFamilies
+        TypeApplications
+        DeriveAnyClass
+        StandaloneDeriving
+        TypeSynonymInstances
+        MultiParamTypeClasses
+        RankNTypes
+
+executable hs-groceries
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    other-modules:
+        Views
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:  
+        base >=4.5 && <5,
+        beam-core >=0.9.2.0 && <1.0,
+        beam-sqlite,
+        lucid,
+        http-types,
+        hs-groceries,
+        sqlite-simple,
+        scotty >= 0.12,
+        text
+    hs-source-dirs:   app
+    default-language: Haskell2010
+    default-extensions:
+        OverloadedStrings
